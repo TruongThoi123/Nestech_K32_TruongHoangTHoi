@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ham kiem tra so nguyen to</title>
+</head>
+<body>
+    <script>
+      // Hàm kiểm tra số nguyên tố
+function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Tìm tất cả các số nguyên tố nhỏ hơn 10000 và in kết quả
+for (let i = 2; i < 10000; i++) {
+    if (isPrime(i)) {
+        console.log(i);
+    }
+}
+
+    </script>
+</body>
+</html>
